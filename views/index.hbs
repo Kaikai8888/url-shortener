@@ -8,9 +8,8 @@
     </div>
     <div class="row align-items-center justify-content-center">
       <form class="form-inline" action="/urls" method="POST">
-        <input type="text" class="form-control mb-2 mr-sm-2 pill" id="original-url" name="originalURL"
-          placeholder="Input URL here"
-          pattern="https?://(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)">
+        <input class="form-control mb-2 mr-sm-2 pill" id="original-url" name="originalURL" placeholder="Input URL here"
+          pattern="(https?://)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)">
         <button type="submit" class="btn btn-primary mb-2 pill">Shorten</button>
       </form>
     </div>
