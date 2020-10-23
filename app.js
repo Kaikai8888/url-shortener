@@ -5,8 +5,8 @@ const bodyParser = require('body-parser')
 const router = require('./routes')
 
 const app = express()
-const PORT = 3000
-const URL = 'http://localhost'
+const PORT = process.env.PORT || 3000
+const URL = process.env.PORT ? 'https://polar-ridge-08340.herokuapp.com/' : 'http://localhost'
 
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
