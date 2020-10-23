@@ -1,6 +1,10 @@
 # URL Shortener
 A simple web app built with Express.js and MongoDB to generate shortened URL
 
+https://polar-ridge-08340.herokuapp.com/
+
+
+
 ## Feature
 * Shortening URL
 * Get previous shortened URL if the URL already exists in the database
