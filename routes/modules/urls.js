@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
 
         Url.create({ originalURL, shortenURL })
           .then(() => res.render('index', { shortenURL }))
-          .catch(error => console.error(error))
+          .catch(error => res.render('error', { errorMessage: 'Invalid URL!' }))
       }
     })
     .catch(error => console.error(error))

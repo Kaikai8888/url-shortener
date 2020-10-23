@@ -12,7 +12,7 @@ router.get('/:short', (req, res) => {
   const shortenURL = DOMAIN + req.params.short
   Url.find({ shortenURL })
     .then(urls => {
-      if (urls.length === 0) return res.render('error')
+      if (urls.length === 0) return res.render('error', { errorMessage: 'Cannot find this URL!' })
       res.redirect(urls[0].originalURL)
     })
     .catch(error => console.error(error))
