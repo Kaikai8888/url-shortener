@@ -8,14 +8,16 @@
       </form>
     </div>
     {{#if shortenURL}}
-    <div class="row align-items-center mt-3 justify-content-center">
+    <div class="row align-items-center mt-3 justify-content-center" id="shorten-url-output">
       <p>Success! Please use this link:</p>
       <div class="w-100"></div>
-      <a href="{{shortenURL}}" target="_black" data-toggle="tooltip" data-placement="bottom" id="shortenURL"
-        title="Copy & Open in new tab" class="mr-1">{{ shortenURL }}</a>
-      <button data-toggle="tooltip" data-placement="bottom" title="Copy"
-        class="btn btn-secondary btn-sm rounded-circle ml-1 " style="margin-bottom: -20px; padding: 3px 7px!important;">
-        <i class="fas fa-copy font-weight-light"></i>
+      <a href="{{shortenURL}}" target="_black" data-toggle="tooltip" data-placement="bottom"
+        title="Copy & Open in new tab" style="cursor: pointer;">
+        <input type="text" id="shorten-url" value="{{ shortenURL }}" disabled
+          style="cursor: pointer; padding: 5px;"></a>
+      <button id="copy-btn" data-toggle="tooltip" data-placement="bottom" title="Copy"
+        class="btn btn-secondary btn-sm rounded-circle" style="margin-bottom: -25px; margin-left: -10px;">
+        <i class=" fas fa-copy font-weight-light"></i>
       </button>
     </div>
     {{/if}}
