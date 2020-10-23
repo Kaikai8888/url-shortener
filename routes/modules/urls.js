@@ -6,8 +6,8 @@ require('../../config/mongoose.js')
 const Url = require('../../models/url.js')
 
 const URL_LENGTH = 5
-const DOMAIN = process.env.DOMAIN || 'http://localhost:3000/'
-
+const DOMAIN = process.env.PORT ? 'https://polar-ridge-08340.herokuapp.com/' : 'http://localhost:3000/'
+console.log(process.env)
 //shorten url
 router.post('/', (req, res) => {
   const originalURL = req.body.originalURL
