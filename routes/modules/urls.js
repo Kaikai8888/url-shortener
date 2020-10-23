@@ -8,6 +8,7 @@ const Url = require('../../models/url.js')
 const URL_LENGTH = 5
 const DOMAIN = 'http://localhost:3000/'
 
+//shorten url
 router.post('/', (req, res) => {
   const originalURL = req.body.originalURL
   Url.find()

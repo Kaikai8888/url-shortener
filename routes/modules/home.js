@@ -7,6 +7,7 @@ const DOMAIN = 'http://localhost:3000/'
 
 router.get('/', (req, res) => res.render('index'))
 
+//redirect to original url
 router.get('/:short', (req, res) => {
   const shortenURL = DOMAIN + req.params.short
   Url.find({ shortenURL })

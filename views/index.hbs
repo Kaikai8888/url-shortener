@@ -1,12 +1,18 @@
 <div class="container">
-  <div class="row align-items-center justify-content-center" style="height: 95vh; width: 100%;">
-    <form class="form-inline" action="/urls" method="POST">
-      <input type="text" class="form-control mb-2 mr-sm-2" id="original-url" name="originalURL"
-        placeholder="Input URL here">
-      <button type="submit" class="btn btn-primary mb-2">Shorten</button>
-    </form>
-
-    <p>{{ shortenURL }}</p>
+  <div class="d-flex flex-column align-items-center justify-content-center" style="height: 95vh; width: 100%;">
+    <div class="row align-items-center justify-content-center">
+      <form class="form-inline" action="/urls" method="POST">
+        <input type="text" class="form-control mb-2 mr-sm-2" id="original-url" name="originalURL"
+          placeholder="Input URL here">
+        <button type="submit" class="btn btn-primary mb-2">Shorten</button>
+      </form>
+    </div>
+    <div class="row align-items-center justify-content-center">
+      <a href="{{shortenURL}}" target="_black" data-toggle="tooltip" data-placement="bottom" id="shortenURL"
+        title="Copy & Open in new tab">{{ shortenURL }}</a>
+    </div>
   </div>
+
+
 
 </div>
