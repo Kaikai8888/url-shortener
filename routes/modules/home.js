@@ -3,7 +3,7 @@ const router = express.Router()
 
 require('../../config/mongoose.js')
 const Url = require('../../models/url.js')
-const DOMAIN = 'http://localhost:3000/'
+const DOMAIN = process.env.PORT ? 'https://polar-ridge-08340.herokuapp.com/' : 'http://localhost:3000/'
 
 router.get('/', (req, res) => res.render('index'))
 
