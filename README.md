@@ -3,7 +3,7 @@ A simple web app built with Express.js and MongoDB to generate shortened URL
 
 https://polar-ridge-08340.herokuapp.com/
 
-
+![screenshot](./screenshot.png)
 
 ## Feature
 * Shortening URL
