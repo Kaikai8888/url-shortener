@@ -7,10 +7,18 @@
         <button type="submit" class="btn btn-primary mb-2">Shorten</button>
       </form>
     </div>
-    <div class="row align-items-center justify-content-center">
+    {{#if shortenURL}}
+    <div class="row align-items-center mt-3 justify-content-center">
+      <p>Success! Please use this link:</p>
+      <div class="w-100"></div>
       <a href="{{shortenURL}}" target="_black" data-toggle="tooltip" data-placement="bottom" id="shortenURL"
-        title="Copy & Open in new tab">{{ shortenURL }}</a>
+        title="Copy & Open in new tab" class="mr-1">{{ shortenURL }}</a>
+      <button data-toggle="tooltip" data-placement="bottom" title="Copy"
+        class="btn btn-secondary btn-sm rounded-circle ml-1 " style="margin-bottom: -20px; padding: 3px 7px!important;">
+        <i class="fas fa-copy font-weight-light"></i>
+      </button>
     </div>
+    {{/if}}
   </div>
 
 
