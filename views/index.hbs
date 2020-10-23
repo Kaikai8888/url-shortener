@@ -2,9 +2,9 @@
   <div class="d-flex flex-column align-items-center justify-content-center" style="height: 95vh; width: 100%;">
     <div class="row align-items-center justify-content-center">
       <form class="form-inline" action="/urls" method="POST">
-        <input type="text" class="form-control mb-2 mr-sm-2" id="original-url" name="originalURL"
+        <input type="text" class="form-control mb-2 mr-sm-2 pill" id="original-url" name="originalURL"
           placeholder="Input URL here">
-        <button type="submit" class="btn btn-primary mb-2">Shorten</button>
+        <button type="submit" class="btn btn-primary mb-2 pill">Shorten</button>
       </form>
     </div>
     {{#if shortenURL}}
@@ -13,10 +13,10 @@
       <div class="w-100"></div>
       <a href="{{shortenURL}}" target="_black" data-toggle="tooltip" data-placement="bottom"
         title="Copy & Open in new tab" style="cursor: pointer;">
-        <input type="text" id="shorten-url" value="{{ shortenURL }}" disabled
-          style="cursor: pointer; padding: 5px;"></a>
+        <input type="text" id="shorten-url" value="{{ shortenURL }}" disabled class="pill text-white"
+          style="cursor: pointer; padding: 6px 12px; text-decoration:underline;"></a>
       <button id="copy-btn" data-toggle="tooltip" data-placement="bottom" title="Copy"
-        class="btn btn-secondary btn-sm rounded-circle" style="margin-bottom: -25px; margin-left: -10px;">
+        class="btn btn-danger btn-sm rounded-circle" style="margin-bottom: -25px; margin-left: -15px;">
         <i class=" fas fa-copy font-weight-light"></i>
       </button>
     </div>
